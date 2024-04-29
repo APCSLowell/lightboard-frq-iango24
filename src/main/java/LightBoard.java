@@ -40,7 +40,7 @@ public class LightBoard
       else
         return true;
     }
-    if(lights[row][col]==false){
+    else{
       for(int i=0;i<lights[row].length;i++){
         if(lights[row][i])
           count++;
