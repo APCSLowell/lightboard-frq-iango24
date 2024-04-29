@@ -30,26 +30,17 @@ public class LightBoard
   {
     /* to be implemented in part (b) */
    int count = 0;
-    if(lights[row][col]){
-      for(int i=0;i<lights[row].length;i++){
-        if(lights[row][i])
-          count++;
-      }
-      if(count%2==0)
-        return false;
-      else
-        return true;
-    }
-    else{
-      for(int i=0;i<lights[row].length;i++){
-        if(lights[row][i])
-          count++;
-      }
-      if(count%3==0)
-        return true;
-      else
-        return false;
-    }
+    for(int i=0;i<lights[row].length;i++){
+      if(lights[row][i])
+        count++;
+    } 
+    if(lights[row][col]&&count%2==0)
+      return false;
+    else if(lights[row][col]==false&&count%3==0)
+      return true;
+    else
+      return lights[row][col];
+      
  
   }
   public boolean[][] getLights()
