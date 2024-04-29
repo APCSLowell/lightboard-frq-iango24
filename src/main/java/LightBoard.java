@@ -41,8 +41,8 @@ public class LightBoard
         return true;
     }
     if(lights[row][col]==false){
-      for(int i=0;i<light[row].length;i++){
-        if(light[row][i])
+      for(int i=0;i<lights[row].length;i++){
+        if(lights[row][i])
           count++;
       }
       if(count%3==0)
